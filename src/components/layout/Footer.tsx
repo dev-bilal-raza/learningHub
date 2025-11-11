@@ -107,7 +107,18 @@ export default function Footer() {
         >
           <div className="flex flex-col md:flex-row justify-between items-center">
             <div className="flex gap-6 mb-4 md:mb-0">
-              {['𝕏', 'LinkedIn', 'Facebook', 'YouTube'].map((social, i) => (
+              <motion.a 
+                href="https://github.com/dev-bilal-raza" 
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-slate-400 hover:text-white transition-colors text-2xl"
+                whileHover={{ scale: 1.2, color: '#fff' }}
+                whileTap={{ scale: 0.95 }}
+                title="GitHub Profile"
+              >
+                🐙
+              </motion.a>
+              {['𝕏', '💼', '📘', '▶️'].map((icon, i) => (
                 <motion.a 
                   key={i} 
                   href="#" 
@@ -115,7 +126,7 @@ export default function Footer() {
                   whileHover={{ scale: 1.2, color: '#fff' }}
                   whileTap={{ scale: 0.95 }}
                 >
-                  {['𝕏', '💼', '📘', '▶️'][i]}
+                  {icon}
                 </motion.a>
               ))}
             </div>
@@ -150,6 +161,17 @@ export default function Footer() {
           viewport={{ once: true }}
         >
           <p>&copy; {new Date().getFullYear()} LearningHub. All rights reserved.</p>
+          <p className="text-sm mt-3">
+            Developed by{' '}
+            <a 
+              href="https://github.com/dev-bilal-raza" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="text-blue-400 hover:text-blue-300 transition-colors font-semibold"
+            >
+              dev-bilal-raza
+            </a>
+          </p>
         </motion.div>
       </div>
     </footer>
