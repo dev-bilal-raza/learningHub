@@ -2,6 +2,7 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
+import Link from 'next/link';
 
 export default function CTABanner() {
   return (
@@ -46,20 +47,24 @@ export default function CTABanner() {
           transition={{ duration: 0.6, delay: 0.2 }}
           viewport={{ once: true }}
         >
-          <motion.button 
-            className="px-8 py-4 bg-white text-blue-600 font-bold text-lg rounded-lg shadow-lg"
-            whileHover={{ scale: 1.05, boxShadow: "0 20px 40px rgba(0,0,0,0.3)" }}
-            whileTap={{ scale: 0.95 }}
-          >
-            Sign Up Free
-          </motion.button>
-          <motion.button 
-            className="px-8 py-4 bg-white/20 hover:bg-white/30 text-white font-bold text-lg rounded-lg backdrop-blur-md border border-white/30"
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-          >
-            Browse Courses
-          </motion.button>
+          <Link href="/coming-soon">
+            <motion.button 
+              className="px-8 py-4 bg-white text-blue-600 font-bold text-lg rounded-lg shadow-lg"
+              whileHover={{ scale: 1.05, boxShadow: "0 20px 40px rgba(0,0,0,0.3)" }}
+              whileTap={{ scale: 0.95 }}
+            >
+              Sign Up Free
+            </motion.button>
+          </Link>
+          <Link href="/coming-soon">
+            <motion.button 
+              className="px-8 py-4 bg-white/20 hover:bg-white/30 text-white font-bold text-lg rounded-lg backdrop-blur-md border border-white/30"
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+            >
+              Browse Courses
+            </motion.button>
+          </Link>
         </motion.div>
 
         <motion.p 

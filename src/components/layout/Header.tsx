@@ -3,6 +3,7 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
+import Link from 'next/link';
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
@@ -61,20 +62,24 @@ export default function Header() {
 
           {/* CTA Buttons */}
           <div className="hidden md:flex items-center gap-4">
-            <motion.button
-              className="px-6 py-2 text-slate-900 dark:text-white font-semibold hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-            >
-              Sign In
-            </motion.button>
-            <motion.button
-              className="px-6 py-2 bg-gradient-to-r from-blue-600 to-indigo-600 text-white font-semibold rounded-lg hover:shadow-lg transition-all"
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-            >
-              Get Started
-            </motion.button>
+            <Link href="/coming-soon">
+              <motion.button
+                className="px-6 py-2 text-slate-900 dark:text-white font-semibold hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+              >
+                Sign In
+              </motion.button>
+            </Link>
+            <Link href="/coming-soon">
+              <motion.button
+                className="px-6 py-2 bg-gradient-to-r from-blue-600 to-indigo-600 text-white font-semibold rounded-lg hover:shadow-lg transition-all"
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+              >
+                Get Started
+              </motion.button>
+            </Link>
           </div>
 
           {/* Mobile Menu Button */}
@@ -108,12 +113,16 @@ export default function Header() {
               </a>
             ))}
             <div className="flex gap-4 pt-4 border-t border-slate-200 dark:border-slate-700">
-              <button className="flex-1 px-4 py-2 text-slate-900 dark:text-white font-semibold hover:text-blue-600 dark:hover:text-blue-400 transition-colors">
-                Sign In
-              </button>
-              <button className="flex-1 px-4 py-2 bg-gradient-to-r from-blue-600 to-indigo-600 text-white font-semibold rounded-lg">
-                Get Started
-              </button>
+              <Link href="/coming-soon" className="flex-1">
+                <button className="w-full px-4 py-2 text-slate-900 dark:text-white font-semibold hover:text-blue-600 dark:hover:text-blue-400 transition-colors">
+                  Sign In
+                </button>
+              </Link>
+              <Link href="/coming-soon" className="flex-1">
+                <button className="w-full px-4 py-2 bg-gradient-to-r from-blue-600 to-indigo-600 text-white font-semibold rounded-lg">
+                  Get Started
+                </button>
+              </Link>
             </div>
           </nav>
         </motion.div>

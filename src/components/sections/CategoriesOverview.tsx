@@ -2,6 +2,7 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
+import Link from 'next/link';
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -44,7 +45,9 @@ const CategoryCard = ({ icon, title, description, tracks }: { icon: string; titl
       whileHover={{ scale: 1.02 }}
       whileTap={{ scale: 0.98 }}
     >
-      Explore
+      <Link href="/coming-soon" className="block">
+        Explore
+      </Link>
     </motion.button>
   </motion.div>
 );

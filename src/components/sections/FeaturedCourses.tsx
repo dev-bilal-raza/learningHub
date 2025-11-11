@@ -2,6 +2,7 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
+import Link from 'next/link';
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -52,7 +53,9 @@ const CourseCard = ({ title, level, duration, thumbnail }: { title: string; leve
           whileHover={{ scale: 1.02 }}
           whileTap={{ scale: 0.98 }}
         >
-          Start Now
+          <Link href="/coming-soon" className="block">
+            Start Now
+          </Link>
         </motion.button>
       </div>
     </motion.div>
@@ -142,13 +145,15 @@ export default function FeaturedCourses() {
           transition={{ duration: 0.6, delay: 0.4 }}
           viewport={{ once: true }}
         >
-          <motion.button 
-            className="px-8 py-4 bg-gradient-to-r from-blue-600 to-indigo-600 text-white text-lg font-semibold rounded-lg"
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-          >
-            View All Courses
-          </motion.button>
+          <Link href="/coming-soon">
+            <motion.button 
+              className="px-8 py-4 bg-gradient-to-r from-blue-600 to-indigo-600 text-white text-lg font-semibold rounded-lg"
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+            >
+              View All Courses
+            </motion.button>
+          </Link>
         </motion.div>
       </div>
     </section>

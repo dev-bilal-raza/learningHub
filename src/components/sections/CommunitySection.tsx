@@ -2,6 +2,7 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
+import Link from 'next/link';
 
 const itemVariants = {
   hidden: { opacity: 0, x: -20 },
@@ -121,13 +122,15 @@ export default function CommunitySection() {
                   <p className="text-sm text-slate-600 dark:text-slate-400 mt-1">5 hours ago</p>
                 </motion.div>
               </div>
-              <motion.button
-                className="w-full mt-6 bg-gradient-to-r from-blue-600 to-indigo-600 text-white font-semibold py-3 px-8 rounded-lg"
-                whileHover={{ scale: 1.02 }}
-                whileTap={{ scale: 0.98 }}
-              >
-                Join Community
-              </motion.button>
+              <Link href="/coming-soon">
+                <motion.button
+                  className="w-full mt-6 bg-gradient-to-r from-blue-600 to-indigo-600 text-white font-semibold py-3 px-8 rounded-lg"
+                  whileHover={{ scale: 1.02 }}
+                  whileTap={{ scale: 0.98 }}
+                >
+                  Join Community
+                </motion.button>
+              </Link>
             </div>
           </motion.div>
         </div>

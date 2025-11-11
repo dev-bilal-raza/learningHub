@@ -3,6 +3,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
+import Link from 'next/link';
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -79,20 +80,24 @@ export default function HeroSection() {
               className="flex flex-col sm:flex-row gap-4"
               variants={itemVariants}
             >
-              <motion.button 
-                className="px-8 py-4 bg-gradient-to-r from-blue-600 to-indigo-600 text-white text-lg font-semibold rounded-xl hover:shadow-2xl transition-all duration-300"
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-              >
-                Start Learning
-              </motion.button>
-              <motion.button 
-                className="px-8 py-4 bg-white dark:bg-slate-800 text-slate-900 dark:text-white text-lg font-semibold rounded-xl border-2 border-slate-200 dark:border-slate-700 hover:border-blue-600 dark:hover:border-blue-400 transition-all duration-300"
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-              >
-                Browse Courses
-              </motion.button>
+              <Link href="/coming-soon">
+                <motion.button 
+                  className="px-8 py-4 bg-gradient-to-r from-blue-600 to-indigo-600 text-white text-lg font-semibold rounded-xl hover:shadow-2xl transition-all duration-300"
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                >
+                  Start Learning
+                </motion.button>
+              </Link>
+              <Link href="/coming-soon">
+                <motion.button 
+                  className="px-8 py-4 bg-white dark:bg-slate-800 text-slate-900 dark:text-white text-lg font-semibold rounded-xl border-2 border-slate-200 dark:border-slate-700 hover:border-blue-600 dark:hover:border-blue-400 transition-all duration-300"
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                >
+                  Browse Courses
+                </motion.button>
+              </Link>
             </motion.div>
 
             {/* Stats */}

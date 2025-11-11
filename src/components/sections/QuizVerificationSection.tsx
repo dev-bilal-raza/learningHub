@@ -2,6 +2,7 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
+import Link from 'next/link';
 
 const itemVariants = {
   hidden: { opacity: 0, x: -20 },
@@ -60,14 +61,16 @@ export default function QuizVerificationSection() {
               ))}
             </motion.div>
 
-            <motion.button 
-              className="px-8 py-4 bg-gradient-to-r from-blue-600 to-indigo-600 text-white text-lg font-semibold rounded-lg inline-block"
-              variants={itemVariants}
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-            >
-              Take a Free Skill Test
-            </motion.button>
+            <Link href="/coming-soon">
+              <motion.button 
+                className="px-8 py-4 bg-gradient-to-r from-blue-600 to-indigo-600 text-white text-lg font-semibold rounded-lg inline-block"
+                variants={itemVariants}
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+              >
+                Take a Free Skill Test
+              </motion.button>
+            </Link>
           </motion.div>
 
           {/* Visual - Quiz Dashboard Mockup */}
